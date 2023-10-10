@@ -7,10 +7,10 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-
+        const percent = mapParticipants(data.messages.length);
         return {
             statusCode: 200,
-            body: JSON.stringify(data),
+            body: JSON.stringify(percent),
         };
     } catch (error) {
         return {
@@ -19,5 +19,23 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
         };
     }
 };
+
+function mapParticipants(number) {
+    if (number >= 3000) {
+        return 80;
+    } else if (number >= 2500) {
+        return 66;
+    } else if (number >= 2000) {
+        return 50;
+    } else if (number >= 1500) {
+        return 33;
+    } else if (number >= 1000) {
+        return 20;
+    } else {
+        // Handle other cases as needed
+        return 0; // Default value when number is less than 1000
+    }
+}
+
 
 export { handler };
