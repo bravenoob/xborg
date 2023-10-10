@@ -7,7 +7,8 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        const percent = mapParticipants(data.messages.length);
+        const percent = mapParticipants(data.message.length) + mapImpressions(0);
+
         return {
             statusCode: 200,
             body: JSON.stringify(percent),
@@ -34,6 +35,19 @@ function mapParticipants(number) {
     } else {
         // Handle other cases as needed
         return 0; // Default value when number is less than 1000
+    }
+}
+
+function mapImpressions(number) {
+    if (number > 20000000) {
+        return 20;
+    } else if (number >= 15000000) {
+        return 15;
+    } else if (number >= 10000000) {
+        return 10;
+    } else {
+        // Handle other cases as needed
+        return 5; // Default value when number is less than 10000000
     }
 }
 

@@ -1,0 +1,21 @@
+.vertical-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timeline-item {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-left: 2px solid #3498db;
+    position: relative;
+}
+
+.milestone {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
