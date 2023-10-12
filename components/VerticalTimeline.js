@@ -12,7 +12,7 @@ const VerticalTimeline = () => {
             .then((data) => {
                 setCurrentPercent(data.percent);
                 setParticipants(data.participants);
-                setEngagement(formatNumberToMillions(data.totalEngagement));
+                setEngagement(data.totalEngagement);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -43,7 +43,7 @@ const VerticalTimeline = () => {
                     {percent}% Milestone
                     {isMilestoneAchieved ? '✅ - ' : ' - '}
                     $XBG {additionalXBG.toFixed(1)}K unlocked
-                    {top ? ' + top ' + top: ''}
+                    {top ? ' + top ' + top : ''}
                 </div>
             </div>
         );
@@ -53,9 +53,11 @@ const VerticalTimeline = () => {
         <div>
             <div>
                 <p>
-                    Daily participants: <b>{participants}</b>
+                    Daily participants: <b>{participants}</b> - {nextParticipantsTarget(participants)}
                     <br/>
-                    Social engagement: <b>{engagement}</b>
+                    Social engagement: <b>{formatNumberToMillions(engagement)}</b> - {nextEngagementTarget(engagement)}
+                    <br/>
+                    Current progress: <b>{currentPercent}%</b>
                 </p>
             </div>
             <div className="vertical-timeline">
@@ -65,6 +67,37 @@ const VerticalTimeline = () => {
     );
 };
 
+function nextParticipantsTarget(number) {
+    if (number < 1000) {
+        return "next target: 1000 (+20%)"
+    }
+    if (number < 1500) {
+        return "next target: 1500 (+13%)"
+    }
+    if (number < 2000) {
+        return "next target: 2000 (+17%)"
+    }
+    if (number < 2500) {
+        return "next target: 2500 (+16%)"
+    }
+    if (number < 3000) {
+        return "next target: 3000 (+14%)"
+    }
+    return "targets cleared";
+}
+
+function nextEngagementTarget(number) {
+    if (number < 15000000) {
+        return "next target: 15M (+5%)"
+    }
+    if (number < 2000000) {
+        return "next target: 20M (+5%)"
+    }
+    if (number < 25000000) {
+        return "next target: 25M (+5%)"
+    }
+    return "targets cleared";
+}
 
 function formatNumberToMillions(number) {
     if (typeof number === 'number') {

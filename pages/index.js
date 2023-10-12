@@ -16,10 +16,6 @@ export default function Home() {
                 <p className="description">
                     A simple site that shows the collective progress of the <a href="https://xbg-challenge.xborg.com">XBorg challange</a>.
                     <br/>
-                    <br/>
-                    Todo's:
-                    <br/>
-                    - Improve design
                 </p>
                 <VerticalTimeline/>
             </main>
