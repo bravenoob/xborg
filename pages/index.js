@@ -14,12 +14,10 @@ export default function Home() {
 
                 <Header title="XBorg $XBG Challenge"/>
                 <p className="description">
-                    A simple site that show the collective progress of the XBorg challange.
+                    A simple site that shows the collective progress of the <a href="https://xbg-challenge.xborg.com">XBorg challange</a>.
                     <br/>
                     <br/>
                     Todo's:
-                    <br/>
-                    - Add details of each milestone
                     <br/>
                     - Improve design
                 </p>

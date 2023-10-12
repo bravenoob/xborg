@@ -2,7 +2,7 @@ import type {Handler, HandlerContext, HandlerEvent} from "@netlify/functions";
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
     try {
-        const participants = await fetch('https://xbg-challenge.xborg.com/api/leaderboard');
+        const participants = await fetch('https://xbg-challenge.xborg.com/api/history');
         if (!participants.ok) {
             throw new Error('Network response was not ok');
         }
