@@ -53,7 +53,7 @@ const VerticalTimeline = () => {
         <div>
             <div>
                 <p>
-                    Daily participants: <b>{participants}</b> - {nextParticipantsTarget(participants)}
+                    Daily active participants: <b>{participants}</b> - {nextParticipantsTarget(participants)}
                     <br/>
                     Social engagement: <b>{formatNumberToMillions(engagement)}</b> - {nextEngagementTarget(engagement)}
                     <br/>

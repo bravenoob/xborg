@@ -14,7 +14,7 @@ export default function Home() {
 
                 <Header title="XBorg $XBG Challenge"/>
                 <p className="description">
-                    A simple site that shows the collective progress of the <a href="https://xbg-challenge.xborg.com">XBorg challange</a>.
+                    A simple site that shows the collective progress of the <a href="https://xbg-challenge.xborg.com">XBorg challenge</a>.
                     <br/>
                 </p>
                 <VerticalTimeline/>
