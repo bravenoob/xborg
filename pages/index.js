@@ -14,8 +14,10 @@ export default function Home() {
 
                 <Header title="XBorg $XBG Challenge"/>
                 <p className="description">
-                    A simple site that shows the collective progress of the <a href="https://xbg-challenge.xborg.com">XBorg challenge</a>.
+                    A simple site that shows the collective progress of the <b><a href="https://xbg-challenge.xborg.com">XBorg challenge</a></b>.
                     <br/>
+                    <br/>
+                    <i>Feeling supportive? Join <b><a href="http://infinex.io/?ref=sKbfCYLM23ziHVu4RaY6zP">Infinex</a></b> - Gateway to DeFi. Powered by Synthetix and Optimism.</i>
                 </p>
                 <VerticalTimeline/>
             </main>
