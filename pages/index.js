@@ -14,10 +14,10 @@ export default function Home() {
 
                 <Header title="XBorg $XBG Challenge"/>
                 <p className="description">
-                    A simple site that shows the collective progress of the <b><a href="https://xbg-challenge.xborg.com">XBorg challenge</a></b>.
+                    A simple site that shows the collective progress of the <b><a target="_blank" href="https://xbg-challenge.xborg.com">XBorg challenge</a></b>.
                     <br/>
                     <br/>
-                    <i>Feeling supportive? Join <b><a href="http://infinex.io/?ref=sKbfCYLM23ziHVu4RaY6zP">Infinex</a></b> - Gateway to DeFi. Powered by Synthetix and Optimism.</i>
+                    <i>Feeling supportive? Join <b><a target="_blank" href="https://layer3.xyz/?ref=4L206">Layer3</a></b> - Web3 Quests and potential airdrops.</i>
                 </p>
                 <VerticalTimeline/>
             </main>
