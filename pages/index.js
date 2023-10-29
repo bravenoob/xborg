@@ -18,6 +18,8 @@ export default function Home() {
                     <br/>
                     <br/>
                     <i>Feeling supportive? Join <b><a target="_blank" href="https://layer3.xyz/?ref=4L206">Layer3</a></b> - Web3 Quests and potential airdrops.</i>
+                    <br/>
+                    <i>Worlds Walker - Scroll System | <b><a target="_blank" href="https://omnisea.org/Gbq7e4FGXsCYXYb29E0Z">Mint</a></b> your WW on Scroll, free for Prometheus holders.</i>
                 </p>
                 <VerticalTimeline/>
             </main>
